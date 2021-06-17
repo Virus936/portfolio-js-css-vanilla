@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "parcel serve ./src/index.html",
-    "build": "parcel build ./src/index.html"
+    "build": "parcel build ./src/index.html --public-url https://virus936.github.io/portfolio/"
   },
   "keywords": [],
   "author": "viralok",
