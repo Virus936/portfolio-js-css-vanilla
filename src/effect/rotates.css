@@ -1,0 +1,69 @@
+.rotates{
+  padding: 5px;
+  transform:rotate(0);
+  transition:0.5s ;
+  cursor:pointer;
+  
+}
+.rotates:nth-child(3n){
+  transform:translateY(4px);
+  color:pink;
+  animation: 0.5s showletterdown;
+}
+.rotates:nth-child(3n+1){
+  transform:translateY(-4px);
+  color:deepskyblue;
+  animation: 0.5s showletterup;
+}
+.rotates:nth-child(3n+2){
+  transform:translateY(0);
+  color:khaki;
+  animation: 0.5s showletter;
+}
+.rotates:hover{
+  text-transform: uppercase;
+  transition:0.6s;
+}
+.rotates:nth-child(3n):hover{
+  transform: translateY(-10px) scale(1.9) rotateY(360deg) ;
+}
+.rotates:nth-child(3n+1):hover{
+  transform: translateY(-10px) scale(1.9) rotateX(360deg) ;
+}
+.rotates:nth-child(3n+2):hover{
+  transform: translateY(-10px) scale(1.9) rotateZ(360deg) ;
+}
+
+@keyframes showletter{
+  from{
+    transform:rotate(-360deg) translateY(100px) scale(3) ;
+    opacity:0;
+  }
+  to{
+    transform:rotate(0deg) ;
+    opacity:1;
+  }
+}
+
+
+@keyframes showletterdown{
+  from{
+    transform:rotate(-360deg) translateY(100px) scale(3) ;
+    opacity:0;
+  }
+  to{
+    transform:rotate(0deg) translateY(4px);
+    opacity:1;
+  }
+}
+
+@keyframes showletterup{
+  from{
+    transform:rotate(-360deg) translateY(100px) scale(3) ;
+    opacity:0;
+  }
+  to{
+    transform:rotate(0deg) translateY(-4px);
+    opacity:1;
+  }
+}
