@@ -41,6 +41,9 @@ window.onload = function() {
     speed:1,
   });
 };
+
+//    Animation of me
+
 gsap.registerPlugin(ScrollTrigger)
 const tl = gsap.timeline()
 
@@ -50,21 +53,30 @@ tl.from('#me_picture',{
   y:'240px',
   delay:.4,
 })
-
-tl.from('#me_laptop',{
-  opacity:0,
-  duration:.9,
-  x:'100px',
-  delay:.5,
-})
-
 tl.from('#me_mask',{
   opacity:0,
   duration:.9,
   x:'200px',
-  delay:1,
+  delay:.5,
   ease:"elastic.out( 1, 0.3)"
 })
+
+
+tl.from(
+  '#me_skill',
+  {
+    opacity:0,
+    duration:1,
+    delay:.4,
+    ease:'none',
+  }
+)
+
+tl.fromTo(
+  '#me_skill',
+  {rotationY:0},
+  {rotationY:360, duration:3, repeat:-1,ease:'none'}
+)
 
 
 

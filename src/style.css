@@ -50,14 +50,49 @@ html{
   position:absolute;
   border-radius:10px;
 }
-#me_laptop{
+#me_skill{
   position:absolute;
-  border:solid blue 2px;
   border-radius: 10px;
   width:90px;
-  height:90px;
-  right:150px;
-  top:-50px;
+  right:285px;
+
+  height:40px;
+  perspective-origin: center;
+  /*opacity:0;*/
+  transform-style: preserve-3d;
+  /*perspective: 300px;*/
+}
+
+.face {
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  font-size: 30px;
+
+  backface-visibility: hidden;
+  text-align: center;
+}
+.face img{
+  height: 100px;
+}
+
+/* On définit chaque face en fonction de sa direction */
+
+.face-html {
+  transform: translateZ(50px);
+}
+
+.face-js {
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.face-css {
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.face-react {
+  transform: rotateY(-90deg) translateZ(50px);
 }
 
 #me_mask{
