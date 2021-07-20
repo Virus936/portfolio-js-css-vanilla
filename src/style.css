@@ -258,3 +258,6 @@ footer{
 footer ul{
   padding:20px;
 }
+footer a{
+  position:relative;
+}

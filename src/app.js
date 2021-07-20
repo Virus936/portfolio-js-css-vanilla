@@ -66,8 +66,7 @@ tl.from(
   '#me_skill',
   {
     opacity:0,
-    duration:1,
-    delay:.4,
+    duration:.5,
     ease:'none',
   }
 )
